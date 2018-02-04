@@ -1,0 +1,272 @@
+@charset "utf-8";
+/* CSS Document */
+@import'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,';
+@import 'https://fonts.googleapis.com/css?family=Raleway:200';
+
+body{
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 0px; 
+    margin-right: 0px;
+    color: black; 
+   
+   }
+
+
+
+.container
+{
+	
+	  height:300px;
+	  width:1500px;
+	  margin:auto;
+
+	-webkit-box-shadow: 0px 0px 41px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 41px -3px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 41px -3px rgba(0,0,0,0.75);
+}
+.zomato
+{
+	width:50%;
+	height:85%;
+	background:#cc202e;
+	float:left;
+}
+
+.trip_advisor
+{
+	float:right;
+	width:50%;
+	height:85%;
+	background:white;
+	text-align:center;
+	
+}
+
+.zomato_review
+{
+	width:50%;
+	height:15%;
+	float:left;
+	border-top: 1px solid black;
+	background:#cc202e;
+	color:white;
+	font-family:'Open+Sans+Condensed', sans-serif;
+	text-align:center;
+	
+}
+.trip_review
+{
+	width:50%;
+	height:15%;
+	float:right;
+	border-top: 1px solid black;
+	background:white;
+	font-family:'Open+Sans+Condensed', sans-serif;
+	text-align:center;	
+}
+
+.container2
+{
+	border-top: 1px solid #000;
+	width:1500px;
+	height:160px;
+	margin:auto;
+	
+}
+
+.button0
+{
+
+	height:98px;
+	width:98px;
+	float:left;
+	margin-top:20px;
+	border-radius:50%;
+	transitions:all 0.3s;
+	-webkit-transition:all 0.3S ;
+}
+.button0:hover
+{
+	
+	cursor:pointer;
+	background:rgba(0,0,0,0.75);
+ 	-webkit-box-shadow: 0px 0px 0px 13px #353534;
+    -moz-box-shadow: 0px 0px 0px 13px #353534;
+    box-shadow: 0px 0px 0px 13px #353534;
+
+
+}
+.button1
+{	margin-left:98px;
+	height:98px;
+	width:98px;
+	float:left;
+	margin-top:20px;
+	border-radius:50%;
+	transitions:all 0.3s;
+	-webkit-transition:all 0.3S ;
+}
+.button1:hover
+{
+	background:#353534;
+	cursor:pointer;
+	-webkit-box-shadow: 0px 0px 0px 13px #353534;
+	-moz-box-shadow: 0px 0px 0px 13px #353534;
+	box-shadow: 0px 0px 0px 13px #353534;
+
+}
+
+.label
+{
+	width:100px;
+	height:40px;
+	text-align:center;
+	float:left;
+	font-family:'Open+Sans+Condensed', sans-serif;
+  	margin-top:15px;
+}
+
+.label1
+{
+	width:100px;
+	height:40px;
+	text-align:center;
+	float:left;
+	margin-left:96px;
+    font-family:'Open+Sans+Condensed', sans-serif;
+	margin-top:15px;
+}
+
+.container3
+{
+	width:1500px;
+	min-height:500px;
+	height:auto;
+	margin:auto;
+	margin-top:10px;
+	border:1px solid #ccc;
+	border-radius:10px;
+	overflow:auto;
+	
+}
+.overall_content
+{
+	width:1500px;
+	-webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+.ambiance_content,.restaurant_content,.entertainment_content,.food_content,.drinks_content,.service_content,.location_content
+{
+	width:1500px;
+	display:none;
+	-webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+
+
+
+
+
+.heading_container
+{
+	font-size:40px;
+	font-family:Raleway, sans-serif;
+	
+}
+
+.left_box
+{
+	width:50%;
+	float:left;
+
+	height:auto;
+	overflow:auto;
+	padding-bottom:20px;
+	
+	
+}
+.right_box
+{
+	width:50%;
+	float:right;
+	overflow:auto;
+
+	padding-bottom:20px;
+
+}
+
+
+.comments_style
+{
+font-family:'Raleway', sans-serif; 
+font-size:20px;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0;height:0px;}
+    to   { opacity: 1; height:auto;}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0;height:0px;}
+    to   { opacity: 1; height:auto;}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0;height:0px;}
+    to   { opacity: 1; height:auto;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0;height:0px;}
+    to   { opacity: 1; height:auto;}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0;height:0px;}
+    to   { opacity: 1; height:auto;}
+}
+
+
+
+
+@keyframes fadeout{
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}

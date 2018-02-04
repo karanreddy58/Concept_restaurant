@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Feltso Review</title>
+
+<script type="text/javascript" src="function_feltso.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="vote_percentage()">
+<p align="center" style="padding:0px;font-family:'Raleway', sans-serif; font-size:45px;" id="title_name">sample</p>
+<br />
+<div class="container">
+  <div class="zomato"> <a href="#" id="zomato_link">
+    <div style="height:70%;width:70%;margin:auto;margin-top:5%;"> <img src="assets/Zomato-logo.png" height="100%" style="margin-left:10%"/> </div>
+    </a> </div>
+  <!-- zomato div ends -->
+  
+  <div class="trip_advisor"> <a id="trip_link" href="#">
+    <div style="position:inherit;height:70%;width:70%;margin:auto;margin-top:5%;"> <img src="assets/trip_advisor.png" height="100%" width="auto" style="margin-left:20%" /> </div>
+    </a> </div>
+  <!-- trip advisor div ends -->
+  <div class="zomato_review">
+    <p align="center" style="position:relative;bottom:15px;"/>
+    <img src="assets/rating-xxl.png" style=" height:25px;position: relative;top:7px" />&nbsp;&nbsp;<span id="zom_rate" >0.0</span>&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp <img src="assets/images.png"style=" height:25px;position: relative;top:7px" />&nbsp;&nbsp;<span id="zom_vote" >0</span>
+    </p>
+  </div>
+  <div class="trip_review">
+    <p align="center" style="position:relative;bottom:15px;"/>
+    <img src="assets/rating-xxl.png" style=" height:25px;position: relative;top:7px" />&nbsp;&nbsp;<span id="trip_rate" >0.0</span>&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp <img src="assets/images.png"style=" height:25px;position: relative;top:7px" />&nbsp;&nbsp;<span id="trip_vote" >0.0</span>
+    </p>
+  </div>
+</div>
+<!-- container ends here -->
+
+<p style=" font-family:Raleway, sans-serif; font-size:45px; " align="center">STATS</p>
+<div class="container2" > <br />
+  <div class="button0" onclick="overall_function()"> <img src="assets/pie.png" height="100px";/> </div>
+  <div class="button1" onclick="restaurant_function()"> <img src="assets/restaurant_icon.png" height="100px";/> </div>
+  <div class="button1" onclick="ambiance_function()"> <img src="assets/amb.png" height="100px";/> </div>
+  <div class="button1" onclick="entertainment_function()"> <img src="assets/entertainment.png" height="100px";/> </div>
+  <div class="button1" onclick="food_function()"> <img src="assets/food.png" height="100px";/> </div>
+  <div class="button1" onclick="drinks_function()"> <img src="assets/drinks.png" height="100px";/> </div>
+  <div class="button1" onclick="service_function()"> <img src="assets/service.png" height="90px";/> </div>
+  <div class="button1" onclick="location_function()"> <img src="assets/location.png" height="100px";/> </div>
+  <div class="label">
+    <p>Overall stats </p>
+  </div>
+  <div class="label1">
+    <p>Restaurant</p>
+  </div>
+  <div class="label1">
+    <p>Ambiance</p>
+  </div>
+  <div class="label1">
+    <p>Entertainment</p>
+  </div>
+  <div class="label1">
+    <p>Food</p>
+  </div>
+  <div class="label1">
+    <p>Drinks</p>
+  </div>
+  <div class="label1">
+    <p>Service</p>
+  </div>
+  <div class="label1">
+    <p>Location</p>
+  </div>
+</div>
+<!-- container 2 ends here --> 
+
+<br />
+<br />
+<div class="container3">
+  <div class="overall_content" id="content_overall">
+    <p align="center" class="heading_container">Status</p>
+    <div class="left_box">
+      <p align="center" class="heading_container">Overall Status</p>
+      <br />
+      <div style="width:256px;height:256px;margin:auto;">
+        <canvas id="mycanvas" width="256" height="256"></canvas>
+      </div>
+    </div>
+    <!-- leftbox ends -->
+    <div class="right_box">
+      <p align="center" class="heading_container">Time wise status</p>
+      <br />
+      <div style="width:500px;height:300px;margin:auto;">
+        <canvas id="mycanvas2" width="500" height="300"></canvas>
+      </div>
+      <!-- right box ends --> 
+      
+    </div>
+    
+    <!-- overallcontent ends here --> 
+    
+  </div>
+  <div class="restaurant_content" id="content_restaurant">
+    <p align="center" class="heading_container" id="cat_name">Restaurant Status</p>
+    <div style="width:300px;height:20px;background:#ff6666;margin:auto;border-radius:10px" >
+      <div style="width:0%;height:20px;background:#70db70;border-radius:10px;" id="progress"> </div>
+    </div>
+    <div class="left_box">
+      <p align="center" class="heading_container">Positive comments</p>
+      <br />
+      <div style="width:100%;height:auto;overflow:auto;margin:auto;">
+        <ul class="comments_style"  id="pos_sam">
+          <li>Comment</li>
+        </ul>
+      </div>
+    </div>
+    <!-- leftbox ends -->
+    <div class="right_box">
+      <p align="center" class="heading_container">Negative comments</p>
+      <br />
+      <div style="width:100%;height:auto;overflow:auto;margin:auto;">
+        <ul class="comments_style"  id="neg_sam">
+          <li>Comment</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- right box ends --> 
+    
+  </div>
+  <!-- restaurant content ends here -->
+  
+  
+  
+</div>
+<!-- container 3 ends here --> 
+<br />
+<br />
+</body>
+<script src="jquery-2.1.4.min.js"></script>
+<script src="Chart.js"></script>
+<script>
+		$(document).ready(function(){
+			
+			
+
+
+		$.getJSON('uploads/myJson.json', function(data) {  
+//		alert("hey");
+			$("#title_name").html(data.restaurant_name);
+			$("#zomato_link").attr('href','http://'+data.sources_info[0].url);
+			$("#zom_rate").html(data.sources_info[0].overall_rating);
+			$("#zom_vote").html(data.sources_info[0].votes_count);
+			
+			$("#trip_link").attr('href','http://'+data.sources_info[1].url);
+			$("#trip_rate").html(data.sources_info[1].overall_rating);
+			$("#trip_vote").html(data.sources_info[1].votes_count);
+			
+		//$.each(data.sources_info, function(i, sri) {
+		//		$('"#zomato_link").attr('href',data.url);
+		//	})
+		
+		
+		//Pie
+		var ctx = $("#mycanvas").get(0).getContext("2d");
+				
+				var a=data.feltso_gist.overall_stats.positive_count;
+				var b=data.feltso_gist.overall_stats.negative_count;
+				var c=data.feltso_gist.overall_stats.mixed_count;
+				var val=360/(a+b+c);
+								
+
+				var a1,b1,c1;
+				a1=val*a;
+				b1=val*b;
+				c1=val*c;
+				
+				
+				//pie chart data
+				//sum of values = 360
+				var pie_data = [
+					{
+						value: a1,
+						color: "cornflowerblue",
+						highlight: "lightskyblue",
+						label: "Positive"
+					},
+					{
+						value: b1,
+						color: "lightgreen",
+						highlight: "yellowgreen",
+						label: "Negative"
+					},
+					{
+						value: c1,
+						color: "orange",
+						highlight: "darkorange",
+						label: "Mixed"
+					}
+				];
+
+				//draw
+				var piechart = new Chart(ctx).Doughnut(pie_data);
+				
+				var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept'];//,"Oct","Nov","Dec"];
+				var positiveData = [];	
+				var negitiveData =[];
+				var mixedData = [];
+					
+				for (i=0;i<mo.length;i++){
+					var cm_col=mo[i]+'-2016';
+					//alert(cm_col);
+					
+					var pos_val=data.feltso_gist.time_wise_stats[cm_col].positive_count;
+					var neg_val=data.feltso_gist.time_wise_stats[cm_col].negative_count;
+					var mix_val=data.feltso_gist.time_wise_stats[cm_col].mixed_count;
+					
+					positiveData[i]=pos_val;
+					negitiveData[i]=neg_val;
+					mixedData[i]=mix_val;
+				}
+								
+
+
+				var gra_data = {
+					labels: mo,
+					datasets: [
+						{
+							label: "Positive",
+							fillColor: "rgba(220,220,220,0.2)",
+							strokeColor: "rgba(220,220,220,1)",
+							pointColor: "rgba(220,220,220,1)",
+							pointStrokeColor: "#fff",
+							pointHighlightFill: "#fff",
+							pointHighlightStroke: "rgba(220,220,220,1)",
+							data: positiveData
+						},
+						{
+							label: "Negative",
+							fillColor: "rgba(151,187,205,0.2)",
+							strokeColor: "rgba(151,187,205,1)",
+							pointColor: "rgba(151,187,205,1)",
+							pointStrokeColor: "#fff",
+							pointHighlightFill: "#fff",
+							pointHighlightStroke: "rgba(151,187,205,1)",
+							data: negitiveData
+						},
+						{
+							label:"Mixed",
+							fillColor: "rgba(0,0,0,0.2)",
+							strokeColor:"rgba(0,0,0,0.2)",
+							pointColor:"grey",
+							pointStrokeColor:"rgba(0,0,0,0.2)",
+							pointHighlightFill:"#000",
+							pointHighlightstore:"blue",
+							data:mixedData
+						},
+							
+						
+					]
+				};
+				
+				
+				var cv = $("#mycanvas2").get(0).getContext("2d");
+				var mychart = new Chart(cv).Line(gra_data);
+});
+});
+
+</script>
+</html>
